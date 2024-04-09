@@ -1,8 +1,5 @@
 package co.edu.uniquindio.poo;
-import java.util.LinkedList;
 import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class ZonaParque {
     public final String nombre;
@@ -10,8 +7,11 @@ public class ZonaParque {
     private  final Collection<Figura> listaFiguras;
     public ZonaParque(String nombre, Collection<Figura> listaFiguras) {
         this.nombre = nombre;
-        this.material = material;
+        this.material = extracted();
         this.listaFiguras = listaFiguras;
+    }
+    private Material extracted() {
+        return material;
     }
     public String getNombre() {
         return nombre;
@@ -20,7 +20,7 @@ public class ZonaParque {
         return listaFiguras;
     }
     public Material getMaterial() {
-        return material;
+        return extracted();
     }
 
     
